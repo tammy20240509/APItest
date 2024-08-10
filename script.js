@@ -4,7 +4,8 @@ const app = new Vue({
   data: {
     // Vue内部で使いたい変数は全てこの中に定義する
     ID: '', //パラメーター「ID」格納変数
-    Name: '', //パラメーター「Name」格納変数
+      Name: '', //パラメーター「Name」格納変数
+      Price: '', //パラメーター「Price」格納変数
     dataList: [], // データ表示用配列
   },
   methods: {
@@ -20,11 +21,12 @@ const app = new Vue({
       //POSTメソッドで送るパラメーターを作成
       const param = {
         ID : this.ID,
-        Name : this.Name
+        Name: this.Name,
+        Price: this.Price
       };
       
       //INSERT用のAPIを呼び出し
-          const response = await axios.post('https://m3h-ishizuka-functionapi.azurewebsites.net/api/INSERT',param);
+      const response = await axios.post('/api/INSERT',param);
       
       //結果をコンソールに出力
       console.log(response.data);
@@ -33,7 +35,7 @@ const app = new Vue({
     // データベースからデータを取得する関数
     readData: async function() {
       //SELECT用のAPIを呼び出し      
-        const response = await axios.get('https://m3h-ishizuka-functionapi.azurewebsites.net/api/SELECT');
+      const response = await axios.get('/api/SELECT');
       
       //結果をコンソールに出力
       console.log(response.data);
