@@ -6,6 +6,7 @@ const app = new Vue({
     ID: '', //パラメーター「ID」格納変数
       Name: '', //パラメーター「Name」格納変数
       Price: '', //パラメーター「Price」格納変数
+      ID2: '', //パラメーター「ID削除用」格納変数
     dataList: [], // データ表示用配列
   },
   methods: {
@@ -47,14 +48,14 @@ const app = new Vue({
       addDelete: async function () {
 
           //IDの入力チェック（空白か数字以外なら終了）
-          if (!this.ID || isNaN(this.ID)) {
+          if (!this.ID2 || isNaN(this.ID2)) {
               console.log("IDに数値が入力されていません");
               return;
           }
 
           //POSTメソッドで送るパラメーターを作成
           const param = {
-              ID: this.ID,
+              ID: this.ID2,
           };
 
           //DELETE用のAPIを呼び出し
