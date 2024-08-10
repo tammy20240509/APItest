@@ -14,63 +14,74 @@
 <div id="app">
   <v-app>
     <v-content>
-      <v-container>
-        <v-row
-          class="text-h3 mb-3 mt-3"
-          justify="center"
-          >
-          APIに接続してみよう
-        </v-row>
-        <v-row class="mb-3 mt-3"
-               align="center"
-               justify="center">
-            <v-col cols="4">
-                <v-text-field class="ml-6 mr-6"
-                              v-model:value="ID"
-                              label="フラペチーノ番号を入力"
-                              placeholder="フラペチーノ番号を入力…"
-                              outlined>
-            </v-col>
-            <v-col cols="6">
-                <v-text-field class="ml-6 mr-6"
-                              v-model:value="Name"
-                              label="フラペチーノ名を入力"
-                              placeholder="フラペチーノ名を入力…"
-                              outlined>
-            </v-col>
-            <v-col cols="4">
-                <v-text-field class="ml-6 mr-6"
-                              v-model:value="Price"
-                              label="価格を入力"
-                              placeholder="価格を入力…"
-                              outlined>
-            </v-col>
-        </v-row>
-        <v-row class="mb-3 mt-3"
-               align="center"
-               justify="center">
-            入力内容　ID: {{ ID }} Name: {{ Name }} Price: {{ Price }}
-            <v-btn v-on:click="addData"
-                   dark
-                   small
-                   color="indigo">
-                DBに登録
-            </v-btn>
-        </v-row>
-        <v-row
-          class="mb-3 mt-3"
-          justify="center"
-          > 
-          <v-btn v-on:click="readData"                 
-                 rounded
-                 >現在の登録内容を表示する</v-btn>
-        </v-row>
-        <v-row class="mb-3 mt-3"
-               justify="center"
-               v-for="data in dataList">
-            ID:{{ data.ID }},Name:{{ data.Name }},Price:{{ data.Price }}
-        </v-row>
-      </v-container>
+        <v-container>
+            <v-row class="text-h3 mb-3 mt-3"
+                   justify="center">
+                APIに接続してみよう
+            </v-row>
+            <v-row class="mb-3 mt-3"
+                   align="center"
+                   justify="center">
+                <v-col cols="4">
+                    <v-text-field class="ml-6 mr-6"
+                                  v-model:value="ID"
+                                  label="フラペチーノ番号を入力"
+                                  placeholder="フラペチーノ番号を入力…"
+                                  outlined>
+                </v-col>
+                <v-col cols="6">
+                    <v-text-field class="ml-6 mr-6"
+                                  v-model:value="Name"
+                                  label="フラペチーノ名を入力"
+                                  placeholder="フラペチーノ名を入力…"
+                                  outlined>
+                </v-col>
+                <v-col cols="4">
+                    <v-text-field class="ml-6 mr-6"
+                                  v-model:value="Price"
+                                  label="価格を入力"
+                                  placeholder="価格を入力…"
+                                  outlined>
+                </v-col>
+            </v-row>
+            <v-row class="mb-3 mt-3"
+                   align="center"
+                   justify="center">
+                入力内容　ID: {{ ID }} Name: {{ Name }} Price: {{ Price }}
+                <v-btn v-on:click="addData"
+                       dark
+                       small
+                       color="indigo">
+                    DBに登録
+                </v-btn>
+            </v-row>
+            <v-row class="mb-3 mt-3"
+                   align="center"
+                   justify="center">
+                <v-col cols="4">
+                    <v-text-field class="ml-6 mr-6"
+                                  v-model:value="ID"
+                                  label="削除したいフラペチーノ番号を入力"
+                                  placeholder="削除したいフラペチーノ番号を入力…"
+                                  outlined>
+                </v-col>
+                <v-btn v-on:click="addDelete"
+                       dark
+                       small
+                       color="indigo">
+                    レコードを削除
+                </v-btn>
+                <v-row class="mb-3 mt-3"
+                       justify="center">
+                    <v-btn v-on:click="readData"
+                           rounded>現在の登録内容を表示する</v-btn>
+                </v-row>
+                <v-row class="mb-3 mt-3"
+                       justify="center"
+                       v-for="data in dataList">
+                    ID:{{ data.ID }},Name:{{ data.Name }},Price:{{ data.Price }}
+                </v-row>
+</v-container>
     </v-content>
   </v-app>
 </div>
