@@ -51,11 +51,11 @@
                                           outlined>
                         </v-col>
                     </v-row>
-                    <v-row class="mb-3 mt-3"
+                    <v-row cols="12" class="mb-3 mt-3"
                            align="center"
                            justify="center">
-                        入力内容　ID: {{ ID }} Name: {{ Name }} Price: {{ Price }},Imageurl: {{ Imageurl }}
-                        <v-btn v-on:click="addData"
+                        入力内容　フラペチーノ番号: {{ ID }}, フラペチーノ名: {{ Name }}, 価格: {{ Price }},画像: {{ Imageurl }}
+                        <v-btn cols="12" v-on:click="addData"
                                dark
                                small
                                color="indigo">
@@ -88,7 +88,7 @@
                         <v-row cols="12" class="mb-3 mt-3"
                                justify="center"
                                v-for="data in dataList">
-                            ID:{{ data.ID }},Name:{{ data.Name }},Price:{{ data.Price }},Imageurl:{{ data.Imageurl }}
+                            フラペチーノ番号:{{ data.ID }},フラペチーノ名:{{ data.Name }},価格:{{ data.Price }},画像:{{ data.Imageurl }}
                         </v-row>
                 </v-container>
             </v-content>
