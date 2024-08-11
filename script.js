@@ -4,9 +4,10 @@ const app = new Vue({
   data: {
     // Vue内部で使いたい変数は全てこの中に定義する
     ID: '', //パラメーター「ID」格納変数
-      Name: '', //パラメーター「Name」格納変数
-      Price: '', //パラメーター「Price」格納変数
-      ID2: '', //パラメーター「ID削除用」格納変数
+    Name: '', //パラメーター「Name」格納変数
+    Price: '', //パラメーター「Price」格納変数
+    Imageurl: '', //パラメーター「Imageurl」格納変数
+    ID2: '', //パラメーター「ID削除用」格納変数
     dataList: [], // データ表示用配列
   },
   methods: {
@@ -24,6 +25,7 @@ const app = new Vue({
         ID : this.ID,
         Name: this.Name,
         Price: this.Price
+        Imageurl: this.Imageurl
       };
       
       //INSERT用のAPIを呼び出し
