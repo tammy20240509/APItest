@@ -24,7 +24,7 @@ const app = new Vue({
       const param = {
         ID : this.ID,
         Name: this.Name,
-        Price: this.Price
+        Price: this.Price,
         Imageurl: this.Imageurl
       };
       

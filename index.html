@@ -54,7 +54,7 @@
                     <v-row class="mb-3 mt-3"
                            align="center"
                            justify="center">
-                        入力内容　ID: {{ ID }} Name: {{ Name }} Price: {{ Price }} Imageurl: {{ Imageurl }}
+                        入力内容　ID: {{ ID }} Name: {{ Name }} Price: {{ Price }},Imageurl: {{ Imageurl }}
                         <v-btn v-on:click="addData"
                                dark
                                small
@@ -88,7 +88,7 @@
                         <v-row cols="12" class="mb-3 mt-3"
                                justify="center"
                                v-for="data in dataList">
-                            ID:{{ data.ID }},Name:{{ data.Name }},Price:{{ data.Price }} Imageurl:{{ data.Imageurl }}
+                            ID:{{ data.ID }},Name:{{ data.Name }},Price:{{ data.Price }},Imageurl:{{ data.Imageurl }}
                         </v-row>
                 </v-container>
             </v-content>
