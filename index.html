@@ -22,7 +22,7 @@
                     <v-col cols="12" class="pink">フラペチーノ番号:1</v-col>
                     <v-col cols="12" class="purple">フラペチーノ名:チョコ</v-col>
                     <v-col cols="12" class="deep-purple">価格:700</v-col>
-                    <img height=200 width=200 src="https://i.gyazo.com/64ef7f017141b97ac3a8c063b05fa2f9.jpg">
+                    <img height=200 width=200 src="https://i.gyazo.com/6936e2726513448a1a2a9e422744843d.jpg">
                     <v-row class="mb-3 mt-3"
                            align="center"
                            justify="center">
@@ -99,7 +99,7 @@
                             <v-col cols="12" class="pink">フラペチーノ番号:{{ data.ID }}</v-col>
                             <v-col cols="12" class="purple">フラペチーノ名:{{ data.Name }}</v-col>
                             <v-col cols="12" class="deep-purple">価格:{{ data.Price }}</v-col>
-                            <img height=200 width=200 src="{{ data.Imageurl }}">
+                            <img height=200 width=200 src={{ "data.Imageurl" }}>
                         </v-row>
                 </v-container>
             </v-content>
