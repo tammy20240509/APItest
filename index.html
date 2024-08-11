@@ -54,7 +54,11 @@
                     <v-row cols="12" class="mb-3 mt-3"
                            align="center"
                            justify="center">
-                        入力内容　フラペチーノ番号: {{ ID }}, フラペチーノ名: {{ Name }}, 価格: {{ Price }},画像: {{ Imageurl }}
+                        <v-col cols="12" class="red" align="center">-入力内容-</v-col>
+                        <v-col cols="12" class="pink">フラペチーノ番号: {{ ID }}</v-col>
+                        <v-col cols="12" class="purple">フラペチーノ名: {{ Name }}</v-col>
+                        <v-col cols="12" class="deep-purple">価格: {{ Price }}</v-col>
+                        <v-col cols="12" class="indigo">画像: {{ Imageurl }}</v-col>   
                         <v-btn cols="12" v-on:click="addData"
                                dark
                                small
@@ -88,7 +92,10 @@
                         <v-row cols="12" class="mb-3 mt-3"
                                justify="center"
                                v-for="data in dataList">
-                            フラペチーノ番号:{{ data.ID }},フラペチーノ名:{{ data.Name }},価格:{{ data.Price }},画像:{{ data.Imageurl }}
+                            <v-col cols="12" class="pink">フラペチーノ番号:{{ data.ID }}</v-col>
+                            <v-col cols="12" class="purple">フラペチーノ名:{{ data.Name }}</v-col>
+                            <v-col cols="12" class="deep-purple">価格:{{ data.Price }}</v-col>
+                            <v-col cols="12" class="indigo">画像:{{ data.Imageurl }}</v-col>             
                         </v-row>
                 </v-container>
             </v-content>
