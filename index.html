@@ -99,8 +99,8 @@
                             <v-col cols="12" class="pink">フラペチーノ番号:{{ data.ID }}</v-col>
                             <v-col cols="12" class="purple">フラペチーノ名:{{ data.Name }}</v-col>
                             <v-col cols="12" class="deep-purple">価格:{{ data.Price }}</v-col>
-                            <v-col cols="12" class="indigo">画像: {{ data.Imageurl }}</v-col>
-                            <img height=200 width=200 src="{{ data.Imageurl }}">
+                            <v-col cols="12" class="indigo">画像: {{ data.Imageurl }}</v-col>                          
+                            <img height=200 width=200 v-bind:src="data.Imageurl">
                         </v-row>
                 </v-container>
             </v-content>
