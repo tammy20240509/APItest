@@ -104,7 +104,7 @@
                                               placeholder="検索したいフラペチーノを入力…"
                                               outlined>
                             </v-col>
-                            <v-row cols="12" class="mb-3 mt-3"
+                            <v-col cols="12" class="mb-3 mt-3"
                                    justify="center">
                                 <v-btn v-on:click="readData2"
                                        dark
@@ -112,7 +112,7 @@
                                        color="indigo">
                                     レコードを検索
                                 </v-btn>
-                            </v-row>
+                            </v-col>
                                 <v-row cols="12" class="mb-3 mt-3"
                                        justify="center"
                                        v-for="data in dataList2">
@@ -123,11 +123,11 @@
                                 </v-row>
 
 
-                                <v-row cols="12" class="mb-3 mt-3"
+                                <v-col cols="12" class="mb-3 mt-3"
                                        justify="center">
                                     <v-btn v-on:click="readData"
                                            rounded>フラペチーノ一覧を表示する</v-btn>
-                                </v-row>
+                                </v-col>
                                 <v-row cols="12" class="mb-3 mt-3"
                                        justify="center"
                                        v-for="data in dataList">
