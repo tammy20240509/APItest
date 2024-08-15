@@ -28,6 +28,7 @@
                            justify="center">
                         <v-col cols="4">
                             <v-text-field class="ml-6 mr-6"
+                                          clearable clear-icon="mdi-close-circle"
                                           v-model:value="ID"
                                           label="フラペチーノ番号を入力"
                                           placeholder="フラペチーノ番号を入力…"
@@ -35,6 +36,7 @@
                         </v-col>
                         <v-col cols="6">
                             <v-text-field class="ml-6 mr-6"
+                                          clearable clear-icon="mdi-close-circle"
                                           v-model:value="Name"
                                           label="フラペチーノ名を入力"
                                           placeholder="フラペチーノ名を入力…"
@@ -42,6 +44,7 @@
                         </v-col>
                         <v-col cols="4">
                             <v-text-field class="ml-6 mr-6"
+                                          clearable clear-icon="mdi-close-circle"
                                           v-model:value="Price"
                                           label="価格を入力"
                                           placeholder="価格を入力…"
@@ -49,6 +52,7 @@
                         </v-col>
                         <v-col cols="6">
                             <v-text-field class="ml-6 mr-6"
+                                          clearable clear-icon="mdi-close-circle"
                                           v-model:value="Imageurl"
                                           label="画像URLを入力"
                                           placeholder="画像URLを入力…"
@@ -99,8 +103,8 @@
                             <v-col cols="12" class="pink">フラペチーノ番号:{{ data.ID }}</v-col>
                             <v-col cols="12" class="purple">フラペチーノ名:{{ data.Name }}</v-col>
                             <v-col cols="12" class="deep-purple">価格:{{ data.Price }}</v-col>
-                            <v-col cols="12" class="indigo">画像: {{ data.Imageurl }}</v-col>                          
-                            <img height=200 width=200 v-bind:src="data.Imageurl">
+                            <v-col cols="12" class="indigo"><img height=200 width=200 v-bind:src="data.Imageurl"></v-col>                          
+                            
                         </v-row>
                 </v-container>
             </v-content>
