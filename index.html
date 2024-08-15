@@ -113,11 +113,11 @@
                                 </v-btn>
                                 <v-row cols="12" class="mb-3 mt-3"
                                        justify="center"
-                                       v-for="data2 in dataList2">
-                                    <v-col cols="12" class="pink">フラペチーノ番号:{{ data2.ID2 }}</v-col>
-                                    <v-col cols="12" class="purple">フラペチーノ名:{{ data2.Name2 }}</v-col>
-                                    <v-col cols="12" class="deep-purple">価格:{{ data2.Price2 }}</v-col>
-                                    <v-col cols="12" class="indigo"><img height=200 width=200 v-bind:src="data2.Imageurl2"></v-col>
+                                       v-for="data in dataList">
+                                    <v-col cols="12" class="pink">フラペチーノ番号:{{ data.ID }}</v-col>
+                                    <v-col cols="12" class="purple">フラペチーノ名:{{ data.Name }}</v-col>
+                                    <v-col cols="12" class="deep-purple">価格:{{ data.Price }}</v-col>
+                                    <v-col cols="12" class="indigo"><img height=200 width=200 v-bind:src="data.Imageurl"></v-col>
                                 </v-row>
                             </v-col>
 
