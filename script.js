@@ -9,7 +9,12 @@ const app = new Vue({
     Imageurl: '', //パラメーター「Imageurl」格納変数
     ID2: '', //パラメーター「ID削除用」格納変数
       dataList: [], // データ表示用配列
-      Name2: '', //パラメーター「Name」格納変数
+      dataList2: [], // データ表示用配列
+      Name2: '', //パラメーター「Name2」格納変数
+      ID3: '', //パラメーター「ID」格納変数
+      Name3: '', //パラメーター「Name」格納変数
+      Price3: '', //パラメーター「Price」格納変数
+      Imageurl3: '', //パラメーター「Imageurl」格納変数
     },
   methods: {
     // DBにデータを追加する関数
@@ -90,7 +95,7 @@ const app = new Vue({
           console.log(response.data);
 
           //結果リストを表示用配列に代入
-          this.dataList = response.data.List;
+          this.dataList2 = response.data.List;
       },
   },
 });
