@@ -79,6 +79,7 @@
                            justify="center">
                         <v-col cols="4">
                             <v-text-field class="ml-6 mr-6"
+                                          clearable clear-icon="mdi-close-circle"
                                           v-model:value="ID2"
                                           label="削除したいフラペチーノ番号を入力"
                                           placeholder="削除したいフラペチーノ番号を入力…"
@@ -93,20 +94,48 @@
                             </v-btn>
                         </v-col>
                         <v-row class="mb-3 mt-3"
+                               align="center"
                                justify="center">
-                            <v-btn v-on:click="readData"
-                                   rounded>フラペチーノ一覧を表示する</v-btn>
-                        </v-row>
-                        <v-row cols="12" class="mb-3 mt-3"
-                               justify="center"
-                               v-for="data in dataList">
-                            <v-col cols="12" class="pink">フラペチーノ番号:{{ data.ID }}</v-col>
-                            <v-col cols="12" class="purple">フラペチーノ名:{{ data.Name }}</v-col>
-                            <v-col cols="12" class="deep-purple">価格:{{ data.Price }}</v-col>
-                            <v-col cols="12" class="indigo"><img height=200 width=200 v-bind:src="data.Imageurl"></v-col>                          
-                            
-                        </v-row>
-                </v-container>
+                            <v-col cols="4">
+                                <v-text-field class="ml-6 mr-6"
+                                              clearable clear-icon="mdi-close-circle"
+                                              v-model:value="Name2"
+                                              label="検索したいフラペチーノを入力を入力"
+                                              placeholder="検索したいフラペチーノを入力…"
+                                              outlined>
+                            </v-col>
+                            <v-col cols="12" class="d-flex flex-row justify-center">
+                                <v-btn v-on:click="readData2"
+                                       dark
+                                       small
+                                       color="indigo">
+                                    レコードを検索
+                                </v-btn>
+                                <v-row cols="12" class="mb-3 mt-3"
+                                       justify="center"
+                                       v-for="data2 in dataList2">
+                                    <v-col cols="12" class="pink">フラペチーノ番号:{{ data2.ID2 }}</v-col>
+                                    <v-col cols="12" class="purple">フラペチーノ名:{{ data2.Name2 }}</v-col>
+                                    <v-col cols="12" class="deep-purple">価格:{{ data2.Price2 }}</v-col>
+                                    <v-col cols="12" class="indigo"><img height=200 width=200 v-bind:src="data2.Imageurl2"></v-col>
+                                </v-row>
+                            </v-col>
+
+                            <v-row class="mb-3 mt-3"
+                                   justify="center">
+                                <v-btn v-on:click="readData"
+                                       rounded>フラペチーノ一覧を表示する</v-btn>
+                            </v-row>
+                            <v-row cols="12" class="mb-3 mt-3"
+                                   justify="center"
+                                   v-for="data in dataList">
+                                <v-col cols="12" class="pink">フラペチーノ番号:{{ data.ID }}</v-col>
+                                <v-col cols="12" class="purple">フラペチーノ名:{{ data.Name }}</v-col>
+                                <v-col cols="12" class="deep-purple">価格:{{ data.Price }}</v-col>
+                                <v-col cols="12" class="indigo"><img height=200 width=200 v-bind:src="data.Imageurl"></v-col>
+
+                            </v-row>
+</v-container>
             </v-content>
         </v-app>
     </div>

@@ -9,7 +9,15 @@ const app = new Vue({
     Imageurl: '', //パラメーター「Imageurl」格納変数
     ID2: '', //パラメーター「ID削除用」格納変数
     dataList: [], // データ表示用配列
-  },
+    },
+    data2: {
+        // Vue内部で使いたい変数は全てこの中に定義する
+        ID2: '', //パラメーター「ID」格納変数
+        Name2: '', //パラメーター「Name」格納変数
+        Price2: '', //パラメーター「Price」格納変数
+        Imageurl2: '', //パラメーター「Imageurl」格納変数
+        dataList2: [], // データ表示用配列
+    },
   methods: {
     // DBにデータを追加する関数
     addData: async function() {
@@ -46,7 +54,8 @@ const app = new Vue({
       //結果リストを表示用配列に代入
       this.dataList = response.data.List;
       },
-      //以下DELETE用。IDの入力チェック（空白か数字以外なら終了）
+      
+      //★以下DELETE用。IDの入力チェック（空白か数字以外なら終了）
       addDelete: async function () {
 
           //IDの入力チェック（空白か数字以外なら終了）
@@ -66,6 +75,29 @@ const app = new Vue({
           //結果をコンソールに出力
           console.log(response.data);
 
+      },
+      //★以下SELECT2用。Nameの入力チェック（空白か数字以外なら終了）
+      readData2: async function () {
+
+          //IDの入力チェック（空白なら終了）
+          if (!this.Name2) {
+              console.log("Nameが入力されていません");
+              return;
+          }
+
+          //POSTメソッドで送るパラメーターを作成
+          const param = {
+              Name: this.Name2,
+          };
+
+          //SELECT2用のAPIを呼び出し
+          const response = await axios.post('https://m3h-ishizuka-functionapi.azurewebsites.net/api/SELECT2', param);
+
+          //結果をコンソールに出力
+          console.log(response.data);
+
+          //結果リストを表示用配列に代入
+          this.dataList2 = response.data.List;
       },
   },
 });
