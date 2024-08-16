@@ -1,0 +1,55 @@
+@charset "UTF-8";
+.tab-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tab-label {
+  color: White;
+  background: LightGray;
+  margin-right: 5px;
+  padding: 3px 12px;
+  order: -1;
+}
+
+.tab-content {
+  width: 100%;
+  display: none;
+}
+
+.tab-switch:checked + .tab-label {
+  background: DeepSkyBlue;
+}
+
+.tab-switch:checked + .tab-label + .tab-content {
+  display: block;
+}
+
+.tab-switch {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*========= レイアウトのためのCSSその２ ===============*/
+.swiper--wrapper {
+  /* wrapperのサイズを調整 */
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.swiper-slide {
+  /* スライドのサイズを調整、中身のテキスト配置調整、背景色 */
+  color: #ffffff;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  text-align: center;
+  line-height: 100px;
+  text-align: center;
+}
