@@ -2,185 +2,213 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>CodePen - APItest</title>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css'>
     <link rel='stylesheet' href='https://unpkg.com/@mdi/font@6.x/css/materialdesignicons.min.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slider-pro/1.6.2/css/slider-pro.min.css'>
+    <link rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css'>
+    <link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
     <!-- partial:index.partial.html -->
-    <!-- Vueで指定された"app"要素、この中でのみVueが有効 -->
-    <div id="app">
-        <v-app>
-            <v-content>
-                <v-container>
-                    <v-row class="text-h3 mb-3 mt-3"
-                           justify="center">
-                        フラペチーノが飲みたい！
-                    </v-row>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css'>
+        <link rel='stylesheet' href='https://unpkg.com/@mdi/font@6.x/css/materialdesignicons.min.css'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900'>
+    </head>
+    <body>
+        <!-- partial:index.partial.html -->
+        <!-- Vueで指定された"app"要素、この中でのみVueが有効 -->
+        <div id="app">
+            <v-app>
+                <v-content>
+                    <v-container>
+                        <v-row class="text-h3 mb-3 mt-3"
+                               justify="center">
+                            フラペチーノが飲みたい！
+                        </v-row>
 
-                    <!-- スライド画像 -->
-                    <div class="swiper">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide"><img src="https://i.gyazo.com/4941692e29b5a9b72fe717e12ee7c56c.png"></div>
-                            <div class="swiper-slide"><img src="https://i.gyazo.com/4925736f349491c25df6108b1b524426.png"></div>
-                            <div class="swiper-slide"><img src="https://i.gyazo.com/9e2251076f0fc024b8151da23af586e5.png"></div>
-                            <div class="swiper-slide"><img src="https://i.gyazo.com/b1bf61787a8125a1f80cb316ba8e2ef1.png"></div>
+                        <!-- 第二弾 -->
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide"><img src="https://i.gyazo.com/4941692e29b5a9b72fe717e12ee7c56c.png"></div>
+                                <div class="swiper-slide"><img src="https://i.gyazo.com/4925736f349491c25df6108b1b524426.png"></div>
+                                <div class="swiper-slide"><img src="https://i.gyazo.com/9e2251076f0fc024b8151da23af586e5.png"></div>
+                                <div class="swiper-slide"><img src="https://i.gyazo.com/b1bf61787a8125a1f80cb316ba8e2ef1.png"></div>
+                            </div>
+                            <!-- 必要に応じてページネーション -->
+                            <div class="swiper-pagination"></div>
+                            <!-- 必要に応じてナビボタン -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
                         </div>
-                        <!-- 必要に応じてページネーション -->
-                        <div class="swiper-pagination"></div>
-                        <!-- 必要に応じてナビボタン -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-                    <v-col cols="12">
-                    </v-col>
-                    <!-- タブスタート -->
-                    <div class="tab-wrap">
-                        <!-- タブ1スタート -->
-                        <input id="TAB-01" align="center" type="radio" name="TAB" class="tab-switch" checked="checked" /><label class="tab-label" for="TAB-01">登録</label>
-                        <div class="tab-content">
-                            <v-row class="mb-3 mt-3"
-                                   align="center"
-                                   justify="center">
-                                <v-col cols="4">
-                                    <v-text-field class="ml-6 mr-6"
-                                                  clearable clear-icon="mdi-close-circle"
-                                                  v-model:value="ID"
-                                                  label="フラペチーノ番号を入力"
-                                                  placeholder="フラペチーノ番号を入力…"
-                                                  outlined>
-                                </v-col>
-                                <v-col cols="6">
-                                    <v-text-field class="ml-6 mr-6"
-                                                  clearable clear-icon="mdi-close-circle"
-                                                  v-model:value="Name"
-                                                  label="フラペチーノ名を入力"
-                                                  placeholder="フラペチーノ名を入力…"
-                                                  outlined>
-                                </v-col>
-                                <v-col cols="4">
-                                    <v-text-field class="ml-6 mr-6"
-                                                  clearable clear-icon="mdi-close-circle"
-                                                  v-model:value="Price"
-                                                  label="価格を入力"
-                                                  placeholder="価格を入力…"
-                                                  outlined>
-                                </v-col>
-                                <v-col cols="6">
-                                    <v-text-field class="ml-6 mr-6"
-                                                  clearable clear-icon="mdi-close-circle"
-                                                  v-model:value="Imageurl"
-                                                  label="画像URLを入力"
-                                                  placeholder="画像URLを入力…"
-                                                  outlined>
-                                </v-col>
-                            </v-row>
-                            <v-row cols="12" class="mb-3 mt-3"
-                                   align="center"
-                                   justify="center">
-                                <v-col cols="12" class="red" align="center">-入力内容-</v-col>
-                                <v-col cols="12" class="pink">フラペチーノ番号: {{ ID }}</v-col>
-                                <v-col cols="12" class="purple">フラペチーノ名: {{ Name }}</v-col>
-                                <v-col cols="12" class="deep-purple">価格: {{ Price }}</v-col>
-                                <v-col cols="12" class="indigo">画像: {{ Imageurl }}</v-col>
+                        <v-col cols="12">
+                        </v-col>
+                        <div class="tab-wrap">
+                            <input id="TAB-01" align="center" type="radio" name="TAB" class="tab-switch" checked="checked" /><label class="tab-label" for="TAB-01">登録</label>
+                            <div class="tab-content">
+                                <v-row class="mb-3 mt-3"
+                                       align="center"
+                                       justify="center">
+                                    <v-col cols="4">
+                                        <v-text-field class="ml-6 mr-6"
+                                                      clearable clear-icon="mdi-close-circle"
+                                                      v-model:value="ID"
+                                                      label="フラペチーノ番号を入力"
+                                                      placeholder="フラペチーノ番号を入力…"
+                                                      outlined>
+                                    </v-col>
+                                    <v-col cols="6">
+                                        <v-text-field class="ml-6 mr-6"
+                                                      clearable clear-icon="mdi-close-circle"
+                                                      v-model:value="Name"
+                                                      label="フラペチーノ名を入力"
+                                                      placeholder="フラペチーノ名を入力…"
+                                                      outlined>
+                                    </v-col>
+                                    <v-col cols="4">
+                                        <v-text-field class="ml-6 mr-6"
+                                                      clearable clear-icon="mdi-close-circle"
+                                                      v-model:value="Price"
+                                                      label="価格を入力"
+                                                      placeholder="価格を入力…"
+                                                      outlined>
+                                    </v-col>
+                                    <v-col cols="6">
+                                        <v-text-field class="ml-6 mr-6"
+                                                      clearable clear-icon="mdi-close-circle"
+                                                      v-model:value="Imageurl"
+                                                      label="画像URLを入力"
+                                                      placeholder="画像URLを入力…"
+                                                      outlined>
+                                    </v-col>
+                                </v-row>
+                                <v-row cols="12" class="mb-3 mt-3"
+                                       align="center"
+                                       justify="center">
+                                    <v-col cols="12" class="red" align="center">-入力内容-</v-col>
+                                    <v-col cols="12" class="pink">フラペチーノ番号: {{ ID }}</v-col>
+                                    <v-col cols="12" class="purple">フラペチーノ名: {{ Name }}</v-col>
+                                    <v-col cols="12" class="deep-purple">価格: {{ Price }}</v-col>
+                                    <v-col cols="12" class="indigo">画像: {{ Imageurl }}</v-col>
 
-                                <v-col cols="12">
-                                </v-col><v-btn cols="12" v-on:click="addData"
+                                    <v-col cols="12">
+                                    </v-col><v-btn cols="12" v-on:click="addData"
+                                                   dark
+                                                   small
+                                                   color="lime">
+                                        DBに登録
+                                    </v-btn>
+                                </v-row>
+                            </div>
+                            <input id="TAB-02" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-02">削除</label>
+                            <div class="tab-content">
+                                <v-row class="mb-3 mt-3"
+                                       align="center"
+                                       justify="center">
+                                    <v-col cols="4">
+                                        <v-text-field class="ml-6 mr-6"
+                                                      clearable clear-icon="mdi-close-circle"
+                                                      v-model:value="ID2"
+                                                      label="削除したいフラペチーノ番号を入力"
+                                                      placeholder="削除したいフラペチーノ番号を入力…"
+                                                      outlined>
+                                    </v-col>
+                                    <v-col cols="12" class="d-flex flex-row justify-center">
+                                        <v-btn v-on:click="addDelete"
                                                dark
                                                small
-                                               color="lime">
-                                    DBに登録
-                                </v-btn>
-                            </v-row>
-                        </div>
-                        <!-- タブ2スタート -->
-                        <input id="TAB-02" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-02">削除</label>
-                        <div class="tab-content">
-                            <v-row class="mb-3 mt-3"
-                                   align="center"
-                                   justify="center">
-                                <v-col cols="4">
-                                    <v-text-field class="ml-6 mr-6"
-                                                  clearable clear-icon="mdi-close-circle"
-                                                  v-model:value="ID2"
-                                                  label="削除したいフラペチーノ番号を入力"
-                                                  placeholder="削除したいフラペチーノ番号を入力…"
-                                                  outlined>
-                                </v-col>
-                                <v-col cols="12" class="d-flex flex-row justify-center">
-                                    <v-btn v-on:click="addDelete"
-                                           dark
-                                           small
-                                           color="teal">
-                                        レコードを削除
-                                    </v-btn>
-                                </v-col>
-                        </div>
-                        <!-- タブ3スタート -->
-                        <input id="TAB-03" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-03">検索</label>
-                        <div class="tab-content">
-                            <v-row class="mb-3 mt-3"
-                                   align="center"
-                                   justify="center">
-                                <v-col cols="4">
-                                    <v-text-field class="ml-6 mr-6"
-                                                  clearable clear-icon="mdi-close-circle"
-                                                  v-model:value="Name2"
-                                                  label="検索したいフラペチーノを入力を入力"
-                                                  placeholder="検索したいフラペチーノを入力…"
-                                                  outlined>
-                                </v-col>
-                                <v-col cols="12" class="mb-3 mt-3" align="center"
+                                               color="teal">
+                                            レコードを削除
+                                        </v-btn>
+                                    </v-col>
+                            </div>
+                            <input id="TAB-03" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-03">検索</label>
+                            <div class="tab-content">
+                                <v-row class="mb-3 mt-3"
+                                       align="center"
                                        justify="center">
-                                    <v-btn v-on:click="readData2"
-                                           dark
-                                           small
-                                           color="indigo">
-                                        レコードを検索
-                                    </v-btn>
-                                </v-col>
-                                <v-row cols="12" class="mb-3 mt-3" align="center"
-                                       justify="center"
-                                       v-for="data in dataList2">
-                                    <v-col cols="12" class="pink">フラペチーノ番号:{{ data.ID }}</v-col>
-                                    <v-col cols="12" class="purple">フラペチーノ名:{{ data.Name }}</v-col>
-                                    <v-col cols="12" class="deep-purple">価格:{{ data.Price }}</v-col>
-                                    <v-col cols="12" class="indigo"><img height=200 width=200 v-bind:src="data.Imageurl"></v-col>
-                                </v-row>
-                        </div>
-                        <!-- タブ4スタート -->
-                        <v-col cols="12" class="mb-3 mt-3" align="center"
-                               justify="center">
-                            <v-btn v-on:click="readData"
-                                   rounded>フラペチーノ一覧を表示する</v-btn>
-                        </v-col>
-                        <v-row cols="12" class="mb-3 mt-3"
-                               justify="center"
-                               v-for="data in dataList">
-                            <v-col cols="12" class="pink">フラペチーノ番号:{{ data.ID }}</v-col>
-                            <v-col cols="12" class="purple">フラペチーノ名:{{ data.Name }}</v-col>
-                            <v-col cols="12" class="deep-purple">価格:{{ data.Price }}</v-col>
-                            <v-col cols="12" class="indigo"><img height=200 width=200 v-bind:src="data.Imageurl"></v-col>
-                        </v-row>
-                    </div>
-                </v-container>
-            </v-content>
-        </v-app>
-    </div>
+                                    <v-col cols="4">
+                                        <v-text-field class="ml-6 mr-6"
+                                                      clearable clear-icon="mdi-close-circle"
+                                                      v-model:value="Name2"
+                                                      label="検索したいフラペチーノを入力を入力"
+                                                      placeholder="検索したいフラペチーノを入力…"
+                                                      outlined>
+                                    </v-col>
+                                    <v-col cols="12" class="mb-3 mt-3" align="center"
+                                           justify="center">
+                                        <v-btn v-on:click="readData2"
+                                               dark
+                                               small
+                                               color="indigo">
+                                            レコードを検索
+                                        </v-btn>
+                                    </v-col>
+                                    <v-row cols="12" class="mb-3 mt-3" align="center"
+                                           justify="center"
+                                           v-for="data in dataList2">
+                                        <v-col cols="12" class="pink">フラペチーノ番号:{{ data.ID }}</v-col>
+                                        <v-col cols="12" class="purple">フラペチーノ名:{{ data.Name }}</v-col>
+                                        <v-col cols="12" class="deep-purple">価格:{{ data.Price }}</v-col>
+                                        <v-col cols="12" class="indigo"><img height=200 width=200 v-bind:src="data.Imageurl"></v-col>
+                                    </v-row>
+                            </div>
 
 
 
 
 
 
-    <!-- partial -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script>
-    <script src='https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js'></script>
-    <script src="./script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+                            <v-col cols="12" class="mb-3 mt-3" align="center"
+                                   justify="center">
+                                <v-btn v-on:click="readData"
+                                       rounded>フラペチーノ一覧を表示する</v-btn>
+                            </v-col>
+                            <v-row cols="12" class="mb-3 mt-3"
+                                   justify="center"
+                                   v-for="data in dataList">
+                                <v-col cols="12" class="pink">フラペチーノ番号:{{ data.ID }}</v-col>
+                                <v-col cols="12" class="purple">フラペチーノ名:{{ data.Name }}</v-col>
+                                <v-col cols="12" こおclass="deep-purple">価格:{{ data.Price }}</v-col>
+                                <v-col cols="12" class="indigo"><img height=200 width=200 v-bind:src="data.Imageurl"></v-col>
+
+                            </v-row>
+                    </v-container>
+                </v-content>
+            </v-app>
+        </div>
+
+
+
+
+
+
+        <!-- partial -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script>
+        <script src='https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js'></script>
+        <script src="./script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    </body>
+</html>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js'></script>
+<script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js'></script>
+<script src="./script.js"></script>
+
 </body>
 </html>
